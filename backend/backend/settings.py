@@ -121,11 +121,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = 'static/'
 STATICFILES_DIRS = [
     # This tells Django where to find static files
-    os.path.join(BASE_DIR, 'static'),
+    # os.path.join(BASE_DIR, 'static'),
+    BASE_DIR, 'static'
 ]
+STATIC_ROOT = BASE_DIR/'staticfiles'
 
 
 # Default primary key field type
@@ -139,7 +141,7 @@ JAZZMIN_SETTINGS = {
     'site_sign': "Welcome to TipToes Store",
     'copyright': "VicStack",
     "site_logo": "img/vicstack_logo_white.png",
-
+    "custom_css": "css/admin_custom.css",
 
 }
 
